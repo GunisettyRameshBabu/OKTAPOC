@@ -49,4 +49,8 @@ export class HomeComponent implements OnInit {
       this.userName = userClaims.name;
     }
   }
+
+  logout() {
+    this.oktaAuth.logout('/');
+  }
 }

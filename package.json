@@ -21,6 +21,7 @@
     "@angular/router": "^8.0.0",
     "@okta/okta-angular": "^2.0.0",
     "@okta/okta-signin-widget": "^3.8.2",
+    "bootstrap": "^4.5.0",
     "colors": "^1.1.2",
     "core-js": "^2.4.1",
     "rxjs": "^6.5.2",

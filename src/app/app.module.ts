@@ -35,6 +35,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {
@@ -55,8 +59,8 @@ const appRoutes: Routes = [
     canActivate: [ OktaAuthGuard ],
   },
   {
-    path: 'messages',
-    component: MessagesComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
     canActivate: [ OktaAuthGuard ],
   },
 ];
@@ -68,12 +72,16 @@ const appRoutes: Routes = [
     ProfileComponent,
     MessagesComponent,
     LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     OktaAuthModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: oktaConfig },

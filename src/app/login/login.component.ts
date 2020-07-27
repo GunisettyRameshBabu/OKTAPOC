@@ -24,11 +24,6 @@ export class LoginComponent implements OnInit {
   signIn: any;
   constructor() {
     this.signIn = new OktaSignIn({
-      /**
-       * Note: when using the Sign-In Widget for an ODIC flow, it still
-       * needs to be configured with the base URL for your Okta Org. Here
-       * we derive it from the given issuer for convenience.
-       */
       baseUrl: sampleConfig.oidc.issuer.split('/oauth2')[0],
       clientId: sampleConfig.oidc.clientId,
       redirectUri: sampleConfig.oidc.redirectUri,
@@ -44,6 +39,15 @@ export class LoginComponent implements OnInit {
         issuer: sampleConfig.oidc.issuer,
         display: 'page',
         scopes: sampleConfig.oidc.scopes,
+      },
+      features: {
+        registration: true,                 // Enable self-service registration flow
+        rememberMe: true,                   // Setting to false will remove the checkbox to save username
+        //multiOptionalFactorEnroll: true,  // Allow users to enroll in multiple optional factors before finishing the authentication flow.
+        //selfServiceUnlock: true,          // Will enable unlock in addition to forgotten password
+        //smsRecovery: true,                // Enable SMS-based account recovery
+        //callRecovery: true,               // Enable voice call-based account recovery
+        router: true,                       // Leave this set to true for the API demo
       },
     });
   }

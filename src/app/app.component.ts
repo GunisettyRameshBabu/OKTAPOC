@@ -32,6 +32,9 @@ export class AppComponent implements OnInit {
       const userClaims = await this.oktaAuth.getUser();
       this.userName = userClaims.name;
     }
+    if (!this.isAuthenticated && this.router.url == '/') {
+      this.router.navigate(['login'])
+    }
   }
   logout() {
     this.oktaAuth.logout('/login');

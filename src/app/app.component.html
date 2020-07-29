@@ -85,10 +85,7 @@
                     <li><a href="https://des.az.gov/documents-center" target="_blank">Document Center</a></li>
                     <li><a href="https://des.az.gov/media-center" target="_blank">Media Center</a></li>
                     <li><a href="https://des.az.gov/find-your-local-office" target="_blank">Find Your Local Office</a></li>
-                   <li *ngIf="!isAuthenticated" > 
-                    <button  id="login-button" class="ui primary button" style="float: right;" role="button" routerLink="/login">Login</button>
-                    
-                  </li>
+                  
                   <li *ngIf="isAuthenticated && userName"> 
                    <span style="color: wheat;"><b> Welcome, {{ userName }}! </b> <a  routerLink='' (click)="logout()">Logout</a> </span>
                     

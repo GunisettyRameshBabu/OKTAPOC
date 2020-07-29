@@ -12,7 +12,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import {
   OKTA_CONFIG,
@@ -39,6 +39,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TokenService } from './interceptors/token.service';
 
 const appRoutes: Routes = [
   {
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: oktaConfig },
+    { provide: HTTP_INTERCEPTORS, useClass: TokenService, multi: true }
   ],
   bootstrap: [AppComponent],
 })

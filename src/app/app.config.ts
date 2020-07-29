@@ -4,7 +4,7 @@ export default {
   oidc: {
     clientId: `0oam7vpo3tjBa5UV74x6`,
     issuer: `https://azdesmfb.okta.com/oauth2/default`,
-    redirectUri: 'http://localhost:8081/implicit/callback',
+    redirectUri: 'http://localhost:8080/implicit/callback',
     scopes: ['openid', 'profile', 'email'],
     testing: {
       disableHttpsCheck: true

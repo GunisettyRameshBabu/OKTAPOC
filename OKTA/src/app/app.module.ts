@@ -20,6 +20,9 @@ import {
   OktaAuthModule,
   OktaCallbackComponent,
 } from '@okta/okta-angular';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatMenuModule,MatButtonModule} from '@angular/material';
+import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 
 import config from './app.config';
 
@@ -27,10 +30,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {
@@ -55,12 +60,17 @@ const appRoutes: Routes = [
     HomeComponent,
     ProfileComponent,
     MessagesComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     OktaAuthModule,
     RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+      MatMenuModule, MatButtonModule,
+      NgbNavModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: config.oidc },

@@ -27,10 +27,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {
@@ -55,12 +58,15 @@ const appRoutes: Routes = [
     HomeComponent,
     ProfileComponent,
     MessagesComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     OktaAuthModule,
     RouterModule.forRoot(appRoutes),
+    NgbNavModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: config.oidc },

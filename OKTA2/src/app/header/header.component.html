@@ -103,8 +103,10 @@
             </div> 
         </div>
         <div class="col-md-2 d-flex justify-content-center text-center" *ngIf="isAuthenticated && userName"> 
-            <span style="color: white;padding: 10px;"><b>{{ userName }}! </b> <a routerLink='' (click)="logout()">&nbsp;
-                &nbsp; Logout</a> </span>
+            <span style="color: white;padding: 10px;"><b>Welcome, {{ userName }}! </b> 
+                <!-- <a routerLink='' (click)="logout()">&nbsp;
+                &nbsp; Logout</a>  -->
+            </span>
         </div>
     </div>
   

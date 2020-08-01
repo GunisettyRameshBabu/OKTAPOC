@@ -2,7 +2,7 @@
 
 export default {
   oidc: {
-    clientId: `0oalybbhasPl9mNBO4x6`,
+    clientId: `0oalye591oQwUL3B84x6`,
     issuer: `https://azdesmfb.okta.com/oauth2/default`,
     redirectUri: 'http://localhost:8082/implicit/callback',
     scopes: ['openid', 'profile', 'email'],

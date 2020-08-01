@@ -29,7 +29,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {
@@ -66,7 +66,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     OktaAuthModule,
     RouterModule.forRoot(appRoutes),
-    NgbNavModule
+    NgbModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: config.oidc },

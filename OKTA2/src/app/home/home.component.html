@@ -1,3 +1,278 @@
-<div class="container-fluid">
-  <h1>Welcome this is Application Two</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="About You">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset>
+                  <legend>Personal Information</legend>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="firstName">First Name <i class="fa fa-question-circle" placement="right"
+                          ngbPopover="You must create a personal account to use the system. Enter information about yourself on this, even if you are applying for benifits for someone else." popoverTitle="First Name"></i></label>
+                        <input type="text" class="form-control" id="firstName">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" class="form-control" id="middleName">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="suffix">Suffix (Jr, Sr, Etc.)</label>
+                        <select class="form-control" id="suffix">
+                          <option disabled>-------Select One-------</option>
+                          <option>Jr</option>
+                          <option>Sr</option>
+                          <option>I</option>
+                          <option>II</option>
+                          <option>III</option>
+                          <option>IV</option>
+                          <option>V</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="socialSecNumber">Social Security Number</label>
+                        <input type="text" class="form-control" id="socialSecNumber" placeholder="XXX-XX-XXXX">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="ahcccsId">AHCCCS ID:</label>
+                        <input type="text" class="form-control" id="ahcccsId" placeholder="AXXXXXXXX">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="male">Gender</label>
+                        <br />
+                        <input type="radio" id="male" name="gender"> Male
+                        <input type="radio" id="female" name="gender"> Female
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="ahcccsId">Date of Birth</label>
+                        <div class="input-group">
+                          <input class="form-control" placeholder="mm/dd/yyyy" name="dp" ngbDatepicker
+                            #d="ngbDatepicker">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary fa fa-calendar" (click)="d.toggle()"
+                              type="button"></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div style="min-height: 20px;">
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset>
+                  <legend>Contact Information</legend>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" id="email" placeholder="example@example.com">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="confirmEmail">Confirm E-mail</label>
+                        <input type="text" class="form-control" id="confirmEmail" placeholder="example@exampe.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cellPhone">Cell Phone</label>
+                        <input type="text" class="form-control" id="cellPhone" placeholder="(XXX) XXX-XXXX">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="homePhone">Home Phone</label>
+                        <input type="text" class="form-control" id="homePhone" placeholder="(XXX) XXX-XXXX">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="workPhone">Work Phone</label>
+                        <input type="text" class="form-control" id="workPhone" placeholder="(XXX) XXX-XXXX">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="xtn">Xtn</label>
+                        <input type="text" class="form-control" id="xtn" placeholder="XXXXX">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="xtn">Message or Emergency Phone</label>
+                        <input type="text" class="form-control" id="xtn" placeholder="(XXX) XXX-XXXX">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="xtn">Xtn</label>
+                        <input type="text" class="form-control" id="xtn" placeholder="XXXXX">
+
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5>You will be able to read letters sent to you within your Health-e-Arizona Plus account.</h5>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <span>Do you want to keep getting these letters by U.S. Mail? </span> <input type="radio" id="Yes"
+                  name="letter"> Yes
+                <input type="radio" id="No" name="letter"> No
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <span>Do you want to get alerts about your applications through e-mail, text message, or both? </span>
+                <input type="radio" id="Yes" name="letter"> Yes
+                <input type="radio" id="No" name="letter"> No
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn btn-primary pull-right">Next</button>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+    <div class="col-md-3">
+      <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel title="Help And Hints">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-md-12">
+                <b>
+                  About You <br/>About this page
+                </b>
+                <div>
+                  You must create a personal account to use the system. This page is to identify the user of the account that is being created. Enter information about yourself on this page, even if you are applying for benefits for someone else. If someone besides you needs an account, they will need to create their own account.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 10px;">
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <b>
+                  How to complete this page
+                </b>
+                <div>
+                  To create an account you must provide your first name, last name, gender, date of birth, email address and select ‘Yes’ or ‘No’ to the questions on this page.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 10px;">
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+               
+                <div>
+                  If you select ‘Yes’, we will ask for more details.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 10px;">
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+               
+                <div>
+                  When you are finished, click ‘Next’ to move to the next page.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 10px;">
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+               
+                <div>
+                  Changing your user account information does not report changes or submit a new application.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 10px;">
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+               
+                <div>
+                  You may submit a new application or report changes for an existing application when you return to your home page.
+                </div>
+              </div>
+            </div>
+
+            <div style="min-height: 30px;">
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+               <a href="https://www.healthearizonaplus.gov/Help/UsingHeaPlus.htm">HEAplus</a>
+              </div>
+            </div>
+            
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+
 </div>

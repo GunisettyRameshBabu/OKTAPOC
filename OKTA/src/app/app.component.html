@@ -18,7 +18,8 @@
       <app-header [userName]='userName' [isAuthenticated]="isAuthenticated"></app-header>
     </div>
     <div class="content">
-      <router-outlet></router-outlet>
+      <h1 *ngIf="!isAuthenticated">Authentication in Progress</h1>
+      <router-outlet *ngIf="isAuthenticated"></router-outlet>
     </div>
     <div class="footer">
       <app-footer></app-footer>

@@ -33,83 +33,46 @@
     </div>
 </div>
 <div style="background: #223064;">
-    <div class="row">
-        <div class="col-md-1 d-flex justify-content-end text-center">
-            <a href="http://localhost:8080" style="padding: 10px;color: white;">Dashboard</a>
-        </div>
-        <div class="col-md-9">
-            <div class="container">
-                <ul ngbNav #nav="ngbNav" class="nav-tabs">
-                   
-                      <li ngbNavItem>
-                        <a ngbNavLink routerLink="home" class="white">Home</a>
-                    </li>
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/about-des/welcome-to-des" target="_blank">About
-                            DES</a>
-                    </li>
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/services" target="_blank">Services</a>
-                    </li>
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/about-des/contact-us" target="_blank">Contact
-                            Us</a>
-                      </li>
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/documents-center" target="_blank">Document
-                            Center</a>
-                    </li>
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/media-center" target="_blank">Media Center</a>
-                    </li>
-        
-                    <li ngbNavItem>
-                        <a class="white" ngbNavLink href="https://des.az.gov/find-your-local-office" target="_blank">Find Your
-                            Local Office</a>
-                    </li>
-                   
-                  </ul>
-                  <div [ngbNavOutlet]="nav"></div>
-               <!-- <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand" href="#">Application One</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a href="http://localhost:8080">Dashboard</a></li>
-                            <li class="nav-item"> <a href="https://des.az.gov/about-des/welcome-to-des" target="_blank">About
-                                    DES</a></li>
-                            <li class="nav-item"><a href="https://des.az.gov/services" target="_blank">Services</a></li>
-                            <li class="nav-item"><a href="https://des.az.gov/about-des/contact-us" target="_blank">Contact
-                                    Us</a></li>
-                            <li class="nav-item"><a href="https://des.az.gov/documents-center" target="_blank">Document
-                                    Center</a></li>
-                            <li class="nav-item"><a href="https://des.az.gov/media-center" target="_blank">Media Center</a></li>
-                            <li class="nav-item"><a href="https://des.az.gov/find-your-local-office" target="_blank">Find Your
-                                    Local Office</a></li>
-        
-                            <li class="nav-item" *ngIf="isAuthenticated && userName">
-                                <span style="color: wheat;"><b>{{ userName }}! </b> <a routerLink='' (click)="logout()">&nbsp;
-                                        &nbsp; Logout</a> </span>
-                            </li>
-        
-                        </ul>
-                    </div>
-                </nav> -->
-            </div> 
-        </div>
-        <div class="col-md-2 d-flex justify-content-center text-center" *ngIf="isAuthenticated && userName"> 
-            <span style="color: white;padding: 10px;"><b>Welcome, {{ userName }}! </b> 
-                <!-- <a routerLink='' (click)="logout()">&nbsp;
-                &nbsp; Logout</a>  -->
-            </span>
-        </div>
-    </div>
-  
-    
+    <nav class="container navbar navbar-expand-lg">
+        <a href="http://localhost:8080" style="padding: 10px;color: white;">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: white;"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://des.az.gov/about-des/welcome-to-des" target="_blank">About
+                    DES</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://des.az.gov/services" target="_blank">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://des.az.gov/about-des/contact-us" target="_blank">Contact
+                    Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://des.az.gov/documents-center" target="_blank">Document
+                    Center</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://des.az.gov/media-center" target="_blank">Media Center</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://des.az.gov/find-your-local-office" target="_blank">Find Your
+                    Local Office</a>
+            </li>
+            <li class="nav-item" *ngIf="isAuthenticated && userName">
 
+                <a class="nav-link" >Welcome, {{ userName }}!</a>
+            </li>
+          </ul>
+          
+        </div>
+        
+      </nav>
 </div>

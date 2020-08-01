@@ -40,6 +40,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TokenService } from './interceptors/token.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   {
@@ -74,6 +76,8 @@ const appRoutes: Routes = [
     MessagesComponent,
     LoginComponent,
     DashboardComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

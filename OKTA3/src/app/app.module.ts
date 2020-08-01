@@ -33,7 +33,7 @@ import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
   {

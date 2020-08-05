@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     } else {
       setTimeout(() => {
         this.login();
-      },2000)
+      },1000)
     }
     
   }

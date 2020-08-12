@@ -30,8 +30,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {NgbNavModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { TabComponent } from './tabs/tab.component';
-import { TabsComponent } from './tabs/tabs.component';
 
 const appRoutes: Routes = [
   {
@@ -62,8 +60,6 @@ const appRoutes: Routes = [
     MessagesComponent,
     HeaderComponent,
     FooterComponent,
-    TabsComponent,
-    TabComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,6 @@
 
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
-import { TabsComponent } from '../tabs/tabs.component';
 interface ResourceServerExample {
   label: string;
   url: string;

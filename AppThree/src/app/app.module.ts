@@ -29,7 +29,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbNavModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TabComponent } from './tabs/tab.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 const appRoutes: Routes = [
   {
@@ -59,14 +61,16 @@ const appRoutes: Routes = [
     ProfileComponent,
     MessagesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     OktaAuthModule,
     RouterModule.forRoot(appRoutes),
-    NgbNavModule
+    NgbModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: config.oidc },

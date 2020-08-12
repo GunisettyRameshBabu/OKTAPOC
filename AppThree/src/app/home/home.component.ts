@@ -12,7 +12,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { OktaAuthService } from '@okta/okta-angular';
-
+import { TabsComponent } from '../tabs/tabs.component';
 interface ResourceServerExample {
   label: string;
   url: string;
@@ -29,16 +29,7 @@ export class HomeComponent implements OnInit {
   isAuthenticated: boolean;
 
   constructor(public oktaAuth: OktaAuthService) {
-    this.resourceServerExamples = [
-      {
-        label: 'Node/Express Resource Server Example',
-        url: 'https://github.com/okta/samples-nodejs-express-4/tree/master/resource-server',
-      },
-      {
-        label: 'Java/Spring MVC Resource Server Example',
-        url: 'https://github.com/okta/samples-java-spring-mvc/tree/master/resource-server',
-      },
-    ];
+  
     this.oktaAuth.$authenticationState.subscribe(isAuthenticated => this.isAuthenticated = isAuthenticated);
   }
 

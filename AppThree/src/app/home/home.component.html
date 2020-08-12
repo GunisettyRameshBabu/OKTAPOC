@@ -1,3 +1,69 @@
-<div class="container-fluid">
-  <h1>Welcome this is Application Three</h1>
+<div class="container">
+  <h1>Arizona Unemployment Insurance Benefits</h1>
+  <ngb-tabset [destroyOnHide]="false">
+  
+    <ngb-tab title="Welcome">
+      <ng-template ngbTabContent>
+        <ul>
+          <li>
+            If you would like to file your weekly claim, please select File Weekly Claim
+          </li>
+          <li>
+            If you would like to view claim information, please select the View Claim Information 
+          </li>
+          <li>
+            If you would like to Vet tax information, please select the View Benefits Paid 1099
+          </li>
+          <li>
+            If you would like to establish/reset your pin, please select the Establish/Reset Pin 
+          </li>
+          <li>
+            If you would like to establish/reset your password, please select the Establish/Reset Password
+          </li>
+          <li>
+            If you would like to establish/reset your password, please select the Establish/Reset Password
+          </li>
+          <li>
+            If you have not yet applied for Unemployment Insurance Benefits, click here to complete an online application
+          </li>
+        
+        </ul>
+
+        <span>* Ton/teelendar of local events including upcoming Job Fairs, click here.</span>
+      </ng-template>
+    </ngb-tab>
+     
+    <ngb-tab [disabled]="true">
+      <ng-template ngbTabTitle>File Weekly Claim </ng-template>
+      <ng-template ngbTabContent>
+          <p>This is SMS Setting</p>
+      </ng-template>
+    </ngb-tab>
+     
+    <ngb-tab [disabled]="true">
+      <ng-template ngbTabTitle>View Claim Info</ng-template>
+      <ng-template ngbTabContent>
+          <p>This is Email Setting</p>
+      </ng-template>
+    </ngb-tab>
+     
+    <ngb-tab title="View Benefits Paid (1099)" [disabled]="true">
+      <ng-template ngbTabContent>
+        <p>This is Disabled</p>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Establish/Reset PIN" [disabled]="true">
+      <ng-template ngbTabContent>
+        <p>This is Disabled</p>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Establish/Reset Password" [disabled]="true">
+      <ng-template ngbTabContent>
+        <p>This is Disabled</p>
+      </ng-template>
+    </ngb-tab>
+     
+  </ngb-tabset>
 </div>
